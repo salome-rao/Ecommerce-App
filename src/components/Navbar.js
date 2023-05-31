@@ -29,7 +29,7 @@ const Navbar=()=>{
             Dropdown link
           </Link>
           <ul class="dropdown-menu">
-            <li><Link class="dropdown-item" href="to">Action</Link></li>
+            <li><Link class="dropdown-item" href="to">  Action</Link></li>
             <li><Link class="dropdown-item" href="to">Another action</Link></li>
             <li><Link class="dropdown-item" href="to">Something else here</Link></li>
           </ul>
