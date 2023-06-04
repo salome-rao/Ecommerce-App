@@ -1,0 +1,24 @@
+problems faced during project
+mongoimport wasnt working 
+had to add mongoimport file in mongodb path
+-could find the solution by going through the resourses like google ...searching error
+nodemon is not working
+installed the nodemon globally instead of local project
+throws error MongooseError('Mongoose.prototype.connect() no longer accepts a callback')
+then i changed the code to
+const mongoURI = "mongodb://localhost:27017"
+
+const connectToMongo = async () => {
+try {
+    mongoose.set('strictQuery', false)
+    mongoose.connect(mongoURI) 
+    console.log('Mongo connected')
+}
+catch(error) {
+    console.log(error)
+    process.exit()
+}
+}
+module.exports = connectToMongo;
+
+with the help of mongoose u can make schema that is a validated table in a proper way not like the mongodb collection

@@ -5,7 +5,7 @@ const Card=()=>{
         <>
         
        <div className="card mt-3" style={{"width": "18rem","maxheight":"100px"}}>
-  <img src="..." class="card-img-top" alt="..."/>
+  <img src="https://source.unsplash.com/random/900x700/?fruit" class="card-img-top" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">Card title</h5>
     <p className="card-text">Some quick example   content.</p>
@@ -23,6 +23,9 @@ const Card=()=>{
   <option value="full">full</option>
    </select>
    
+   <div className= "d-inline h-100 fs-5">
+    Total Price 
+   </div>
   </div>
   </div>
 </div>
