@@ -21,4 +21,6 @@ catch(error) {
 }
 module.exports = connectToMongo;
 
+>mongoimport --uri mongodb+srv://salomerao:Salome1002@cluster0.zrmcynv.mongodb.net/FlorDecor --collection Food_table2 --jsonArray --file "E:\react applications\e-commerce\src\foodCategory.json"
+
 with the help of mongoose u can make schema that is a validated table in a proper way not like the mongodb collection

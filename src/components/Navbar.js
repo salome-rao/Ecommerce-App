@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const Navbar=()=>{
 
     return(
@@ -22,9 +23,9 @@ const Navbar=()=>{
           <Link class="nav-link" to="/">About</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="/">Contact</Link>
+          <Link class="nav-link" to="/CreateUser">Sign Up</Link>
         </li>
-        <li class="nav-item dropdown">
+        {/* <li class="nav-item dropdown">
           <Link class="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown link
           </Link>
@@ -33,7 +34,7 @@ const Navbar=()=>{
             <li><Link class="dropdown-item" href="to">Another action</Link></li>
            
           </ul>
-        </li>
+        </li> */}
       </ul>
     </div>
   </div>
