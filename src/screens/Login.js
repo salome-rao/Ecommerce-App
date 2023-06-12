@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login=()=>{
-
+    let navigate = useNavigate();
         const[credential,setcredential]=useState({email:"",password:""})
    
      const handleSubmit= async(e)=>{
@@ -21,7 +21,7 @@ const Login=()=>{
        if(!json.success){
    alert("enter valid credentials");
        }else
-       alert("success");
+       navigate("/");
      }
     const onchange=(event)=>{
        setcredential({...credential,[event.target.name]:event.target.value})

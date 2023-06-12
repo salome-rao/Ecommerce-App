@@ -31,18 +31,26 @@ const mongoURI= 'mongodb+srv://salomerao:Salome1002@cluster0.zrmcynv.mongodb.net
 const mongoconnect = async ()=>{
     mongoose.connect(mongoURI,{useNewUrlParser:true}).then(()=>{
         console.log("connection succesful");
-        const fdata = mongoose.connection.collection("Food_table");
-        fdata.find({}).toArray( function( err,data){
+        const fdata = mongoose.connection.db.collection("Food_table");
+        console.log(fdata);
+        fdata.find({}).toArray((err, data) => {
+            if (err) {
+              console.log('Error retrieving data:', err);
+            } else {
+              console.log('Retrieved data:', data);
+            }
+          });
+        // fdata.find({}).toArray( function( err,data){
             
-                        if(err)
-                        {console.log(err);
+        //                 if(err)
+        //                 {console.log(err);
                             
-                        }
-                        else {
-                        console.log(data);
-                        
-                        }
-                    })
+        //                 }
+        //                 else {
+        //                 global.food_items=data;
+        //                 console.log(food_items)
+        //                 }
+        //             })
     }).catch((err)=> console.log("no connection"));
     
 }
