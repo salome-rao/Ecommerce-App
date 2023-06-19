@@ -24,8 +24,10 @@ const ItemSchema = new mongoose.Schema(
   },
   img:{
      type:String
+  }, 
+  price:{
+  type:String
   },
-  Quantity: [{ half: String, full: String }],
   description:{
       type:String
   }
