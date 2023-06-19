@@ -32,6 +32,9 @@ body("name").isLength({min:5})
     res.json({success:false});
    }
 })
+ 
+
+
 
 router.post("/loginuser",
 body("email").isEmail(),

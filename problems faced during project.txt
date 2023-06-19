@@ -24,3 +24,9 @@ module.exports = connectToMongo;
 >mongoimport --uri mongodb+srv://salomerao:Salome1002@cluster0.zrmcynv.mongodb.net/FlorDecor --collection Food_table2 --jsonArray --file "E:\react applications\e-commerce\src\foodCategory.json"
 
 with the help of mongoose u can make schema that is a validated table in a proper way not like the mongodb collection
+
+we hit the ends point which were in the backend. we created user and then we tried to login also. We used express validator and validated the data also.
+the data we are saving that is password. we have to save it securely so we use Bcryptjs which is a hashing algorithm to encrypt password.
+we will generate authorized token using JWT Token
+A salt is a random string. By hashing a plain text password plus a salt, the hash algorithm's output is no longer predictable.
+
