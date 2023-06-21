@@ -33,10 +33,14 @@ const ItemSchema = new mongoose.Schema(
   }
   }
 );
+const options = {
+  connectTimeoutMS: 60000, // Increase the timeout to 60 seconds
+  // other connection options...
+};
 const Item = mongoose.model('Item',ItemSchema)
 const Food = mongoose.model('Food', foodSchema);
 const mongoconnect = async ()=>{
-   await mongoose.connect(mongoURI,{useNewUrlParser:true}).then( async()=>{
+   await mongoose.connect(mongoURI,{useUnifiedTopology: true,useNewUrlParser:true},options).then( async()=>{
         console.log("connection succesful");
         // const fdata =  mongoose.connection.db.collection("Food_table");
         console.log(fdata); 

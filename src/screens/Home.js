@@ -32,7 +32,7 @@ useEffect(()=>{
 },[])
 
     return(
-        <div>
+        <div style={{backgroundColor:"lightpink"}}>
       
        <Navbar/>
        

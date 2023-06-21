@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const Card = (props) => {
+const handleAddToCart=()=>{
+  
+}
+
   return (
     
     <div >
       <div className="card mt-3" style={{ width: "18rem", maxheight: "360px" }}>
-        <img src={props.imgSrc} class="card-img-top" alt="..." style={{ width: "18rem", height: "200px" }}/>
+        <img src={props.imgSrc} class="card-img-top" alt="..." style={{ objectFit:"fill", height: "200px" }}/>
 
         <div className="card-body">
           <h5 className="card-title">{props.foodName}</h5>
@@ -28,6 +32,8 @@ const Card = (props) => {
 
             <div className="d-inline h-100 fs-5">{props.foodPrice}</div>
           </div>
+          <hr></hr>
+          <button className="btn btn-success justify-center ms-2" onClick={handleAddToCart}>Add to Cart</button>
         </div>
       </div>
     </div>

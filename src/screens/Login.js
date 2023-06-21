@@ -20,8 +20,11 @@ const Login=()=>{
    
        if(!json.success){
    alert("enter valid credentials");
-       }else
+       }else{
+        localStorage.setItem("authToken",json.authToken);
+        console.log(localStorage.getItem("authToken"));
        navigate("/");
+       }
      }
     const onchange=(event)=>{
        setcredential({...credential,[event.target.name]:event.target.value})
@@ -31,7 +34,7 @@ return(
     
     <div className='container m-3'>
 
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit}> 
    
 
 <div class="mb-3">
